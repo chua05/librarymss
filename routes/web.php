@@ -3,6 +3,9 @@
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\Attendant;
 use App\Http\Controllers\User;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Attendant\DashboardController as AttendantDashboardController;
+use App\Http\Controllers\User\DashboardController as UserDashboardController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,7 +46,7 @@ Route::prefix('admin')
     ->name('admin.')
     ->group(function () {
 
-        Route::get('/dashboard', fn () => view('admin.dashboard'))
+        Route::get('/dashboard', [AdminDashboardController::class, 'index'])
             ->name('dashboard');
 
         Route::resource('books', Admin\BookController::class);
@@ -58,7 +61,7 @@ Route::prefix('attendant')
     ->name('attendant.')
     ->group(function () {
 
-        Route::get('/dashboard', fn () => view('attendant.dashboard'))
+        Route::get('/dashboard', [AttendantDashboardController::class, 'index'])
             ->name('dashboard');
 
         // BORROWS
@@ -100,7 +103,7 @@ Route::prefix('user')
     ->name('user.')
     ->group(function () {
 
-        Route::get('/dashboard', fn () => view('user.dashboard'))
+        Route::get('/dashboard', [UserDashboardController::class, 'index'])
             ->name('dashboard');
 
         // BOOKS
