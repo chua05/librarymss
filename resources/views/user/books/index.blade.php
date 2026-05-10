@@ -3,11 +3,11 @@
 @section('content')
 
 <div style="margin-bottom:20px;">
-    <h1 style="font-size:22px;font-weight:700;color:#0f172a;">
+    <h1 style="font-size:22px;font-weight:700;color:#3c2a1e;">
         Available Books
     </h1>
 
-    <p style="font-size:13px;color:#64748b;">
+    <p style="font-size:13px;color:#8b6b4f;">
         Browse and request books for borrowing or reservation.
     </p>
 </div>
@@ -26,13 +26,13 @@
 
 @forelse($books as $book)
 
-    <div style="background:white;border:1px solid #e2e8f0;border-radius:12px;padding:15px;">
+    <div style="background:#fffdf9;border:1px solid #e7d8c8;border-radius:12px;padding:15px;">
 
-        <h3 style="font-size:15px;font-weight:700;color:#0f172a;">
+        <h3 style="font-size:15px;font-weight:700;color:#3c2a1e;">
             {{ $book->title }}
         </h3>
 
-        <p style="font-size:12px;color:#64748b;">
+        <p style="font-size:12px;color:#8b6b4f;">
             {{ $book->author }}
         </p>
 
@@ -53,7 +53,7 @@
 
                 <button type="submit"
                     @if($activeTotal >= 3) disabled @endif
-                    style="padding:6px 10px;background:{{ $activeTotal >= 3 ? '#ccc' : 'rgb(205,73,223)' }};color:white;border:none;border-radius:8px;font-size:12px;cursor:pointer;">
+                    style="padding:6px 10px;background:{{ $activeTotal >= 3 ? '#d3c4b5' : '#b87333' }};color:white;border:none;border-radius:8px;font-size:12px;cursor:pointer;">
                     {{ $activeTotal >= 3 ? 'Limit Reached' : 'Borrow' }}
                 </button>
             </form>
@@ -66,7 +66,7 @@
 
                 <button type="submit"
                 @if($activeTotal >= 3) disabled @endif
-                    style="padding:6px 10px;background:white;border:1px solid #e2e8f0;color:rgb(205,73,223);border-radius:8px;font-size:12px;cursor:pointer;">
+                    style="padding:6px 10px;background:#fffdf9;border:1px solid #e7d8c8;color:#b87333;border-radius:8px;font-size:12px;cursor:pointer;">
                     Reserve
                 </button>
             </form>

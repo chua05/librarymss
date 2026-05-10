@@ -12,17 +12,17 @@
             font-family: 'Sora', sans-serif;
             min-height: 100vh;
             display: flex;
-            background: #0f172a;
+            background: #f8f3ed;
             overflow: hidden;
         }
 
         .left-panel {
             flex: 1;
-            background: linear-gradient(135deg, #521e5f 0%, #270f2a 60%, #2f1035 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 60px;
+            background:
+                linear-gradient(rgba(71, 42, 20, 0.45), rgba(71, 42, 20, 0.45)),
+                url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
             position: relative;
             overflow: hidden;
         }
@@ -33,7 +33,7 @@
             width: 500px;
             height: 500px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(56,189,248,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 214, 171, 0.2) 0%, transparent 70%);
             top: -100px;
             left: -100px;
         }
@@ -44,115 +44,45 @@
             width: 400px;
             height: 400px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(139,92,246,0.07) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(184, 115, 51, 0.18) 0%, transparent 70%);
             bottom: -80px;
             right: -80px;
         }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 60px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .brand-icon {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, #38bdf8, #818cf8);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-        }
-
-        .brand-name {
-            font-size: 18px;
-            font-weight: 600;
-            color: white;
-            letter-spacing: -0.3px;
-        }
-
-        .hero-text {
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 48px;
-            font-weight: 700;
-            color: white;
-            line-height: 1.1;
-            letter-spacing: -1.5px;
-            margin-bottom: 20px;
-        }
-
-        .hero-text h1 span {
-            background: linear-gradient(90deg, #d538f8, #f881f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-text p {
-            font-size: 15px;
-            color: #b394b8;
-            line-height: 1.7;
-            max-width: 340px;
-        }
-
-        .dots {
-            display: flex;
-            gap: 8px;
-            margin-top: 50px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #533355;
-        }
-
-        .dot.active { background: #df38f8; width: 24px; border-radius: 4px; }
-
         .right-panel {
             width: 480px;
-            background: #fff8fe;
+            background: #fffdf9;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 60px 50px;
+            border-left: 1px solid #e7d8c8;
         }
 
         .form-header { margin-bottom: 36px; }
-        .form-header h2 { font-size: 28px; font-weight: 700; color: #0f172a; letter-spacing: -0.5px; margin-bottom: 8px; }
-        .form-header p { font-size: 14px; color: #89648b; }
+        .form-header h2 { font-size: 28px; font-weight: 700; color: #3c2a1e; letter-spacing: -0.5px; margin-bottom: 8px; }
+        .form-header p { font-size: 14px; color: #8b6b4f; }
 
         .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 13px; font-weight: 600; color: #4c3751; margin-bottom: 8px; letter-spacing: 0.3px; }
+        .form-group label { display: block; font-size: 13px; font-weight: 600; color: #5e422d; margin-bottom: 8px; letter-spacing: 0.3px; }
 
         .form-group input {
             width: 100%;
             padding: 12px 16px;
-            border: 1.5px solid #e2e8f0;
+            border: 1.5px solid #e7d8c8;
             border-radius: 10px;
             font-size: 14px;
             font-family: 'Sora', sans-serif;
-            color: #260f2a;
-            background: #f8fafc;
+            color: #3c2a1e;
+            background: #fdf8f3;
             transition: all 0.2s;
             outline: none;
         }
 
         .form-group input:focus {
-            border-color: #db38f8;
+            border-color: #b87333;
             background: white;
-            box-shadow: 0 0 0 3px rgba(56,189,248,0.1);
+            box-shadow: 0 0 0 3px rgba(184, 115, 51, 0.16);
         }
 
         .form-row {
@@ -167,19 +97,19 @@
             align-items: center;
             gap: 8px;
             font-size: 13px;
-            color: #677383;
+            color: #8b6b4f;
             cursor: pointer;
         }
 
         .remember input { width: auto; margin: 0; }
 
-        .forgot { font-size: 13px; color: #d538f8; text-decoration: none; font-weight: 500; }
+        .forgot { font-size: 13px; color: #b87333; text-decoration: none; font-weight: 500; }
         .forgot:hover { text-decoration: underline; }
 
         .btn-login {
             width: 100%;
             padding: 13px;
-            background: linear-gradient(135deg, #e20ee9, #e363f1);
+            background: linear-gradient(135deg, #b87333, #cc8c4d);
             color: white;
             border: none;
             border-radius: 10px;
@@ -198,16 +128,16 @@
             text-align: center;
             margin-top: 24px;
             font-size: 13px;
-            color: #86648b;
+            color: #8b6b4f;
         }
 
-        .register-link a { color: #ef63f1; font-weight: 600; text-decoration: none; }
+        .register-link a { color: #b87333; font-weight: 600; text-decoration: none; }
         .register-link a:hover { text-decoration: underline; }
 
         .error-msg {
-            background: #fef2f2;
-            border: 1px solid #fecaca;
-            color: #dc2626;
+            background: #fff1e8;
+            border: 1px solid #f6c8aa;
+            color: #a24b1d;
             padding: 10px 14px;
             border-radius: 8px;
             font-size: 13px;
@@ -216,19 +146,7 @@
     </style>
 </head>
 <body>
-    <div class="left-panel">
-        <div class="brand">
-            <span class="brand-name">Library Management System</span>
-        </div>
-        <div class="hero-text">
-            <h1>LIBRARY <span>MS</span></h1>
-        </div>
-        <div class="dots">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-        </div>
-    </div>
+    <div class="left-panel"></div>
 
     <div class="right-panel">
         <div class="form-header">

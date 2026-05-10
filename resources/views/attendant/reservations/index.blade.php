@@ -3,20 +3,20 @@
 @section('content')
 
 <div style="margin-bottom:20px;">
-    <h1 style="font-size:22px;font-weight:700;color:#0f172a;">
+    <h1 style="font-size:22px;font-weight:700;color:#3c2a1e;">
         Reservation Requests
     </h1>
 
-    <p style="font-size:13px;color:#64748b;">
+    <p style="font-size:13px;color:#8b6b4f;">
         Review and manage student reservation requests.
     </p>
 </div>
 
-<div style="background:white;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;">
+<div style="background:#fffdf9;border:1px solid #e7d8c8;border-radius:12px;overflow:hidden;">
 <table style="width:100%;border-collapse:collapse;font-size:14px;">
 
 <thead>
-<tr style="background:#f8fafc;">
+<tr style="background:#f3e8dc;">
     <th style="padding:12px;text-align:left;">Student</th>
     <th style="padding:12px;text-align:left;">Book</th>
     <th style="padding:12px;text-align:left;">Status</th>
@@ -28,13 +28,13 @@
 
 {{-- PENDING --}}
 @forelse($pendingReservations as $reservation)
-<tr style="border-top:1px solid #f1f5f9;">
+<tr style="border-top:1px solid #eadfce;">
 
     <td style="padding:12px;">{{ $reservation->user->name }}</td>
     <td style="padding:12px;">{{ $reservation->book->title }}</td>
 
     <td style="padding:12px;">
-        <span style="background:#fef9c3;color:#854d0e;padding:4px 10px;border-radius:99px;font-size:12px;">
+        <span style="background:#fbead8;color:#8b5a2b;padding:4px 10px;border-radius:99px;font-size:12px;">
             Pending
         </span>
     </td>
@@ -45,7 +45,7 @@
             {{-- APPROVE --}}
             <form method="POST" action="{{ route('attendant.reservations.approve', $reservation) }}">
                 @csrf
-                <button style="padding:6px 12px;border:none;border-radius:8px;background:#22c55e;color:white;font-size:12px;cursor:pointer;">
+                <button style="padding:6px 12px;border:none;border-radius:8px;background:#b87333;color:white;font-size:12px;cursor:pointer;">
                     Approve
                 </button>
             </form>
@@ -53,7 +53,7 @@
             {{-- REJECT --}}
             <form method="POST" action="{{ route('attendant.reservations.reject', $reservation) }}">
                 @csrf
-                <button style="padding:6px 12px;border:none;border-radius:8px;background:#ef4444;color:white;font-size:12px;cursor:pointer;">
+                <button style="padding:6px 12px;border:none;border-radius:8px;background:#b45309;color:white;font-size:12px;cursor:pointer;">
                     Reject
                 </button>
             </form>
@@ -63,7 +63,7 @@
 </tr>
 @empty
 <tr>
-    <td colspan="4" style="padding:20px;text-align:center;color:#94a3b8;">
+    <td colspan="4" style="padding:20px;text-align:center;color:#9a7a5f;">
         No pending reservations.
     </td>
 </tr>
@@ -72,13 +72,13 @@
 
 {{-- APPROVED --}}
 @foreach($approvedReservations as $reservation)
-<tr style="border-top:1px solid #f1f5f9;">
+<tr style="border-top:1px solid #eadfce;">
 
     <td style="padding:12px;">{{ $reservation->user->name }}</td>
     <td style="padding:12px;">{{ $reservation->book->title }}</td>
 
     <td style="padding:12px;">
-        <span style="background:#dcfce7;color:#15803d;padding:4px 10px;border-radius:99px;font-size:12px;">
+        <span style="background:#f2e5d7;color:#7a4b22;padding:4px 10px;border-radius:99px;font-size:12px;">
             Approved
         </span>
     </td>
@@ -87,7 +87,7 @@
         <form method="POST" action="{{ route('attendant.reservations.cancel', $reservation) }}">
             @csrf
             <button title="Cancel"
-                style="border:none;background:none;font-size:18px;color:#6b7280;cursor:pointer;">
+                style="border:none;background:none;font-size:18px;color:#8b6b4f;cursor:pointer;">
                 🗑
             </button>
         </form>
@@ -99,12 +99,12 @@
 
 {{-- REJECTED --}}
 @foreach($rejectedReservations as $reservation)
-<tr style="border-top:1px solid #f1f5f9;">
+<tr style="border-top:1px solid #eadfce;">
     <td style="padding:12px;">{{ $reservation->user->name }}</td>
     <td style="padding:12px;">{{ $reservation->book->title }}</td>
 
     <td style="padding:12px;">
-        <span style="background:#fee2e2;color:#991b1b;padding:4px 10px;border-radius:99px;font-size:12px;">
+        <span style="background:#fff1e8;color:#a24b1d;padding:4px 10px;border-radius:99px;font-size:12px;">
             Rejected
         </span>
     </td>

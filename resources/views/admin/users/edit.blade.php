@@ -3,18 +3,18 @@
 @section('content')
 
 <div style="margin-bottom:20px;">
-    <h1 style="font-size:22px;font-weight:700;color:#0f172a;">
+    <h1 style="font-size:22px;font-weight:700;color:#3c2a1e;">
         Edit User
     </h1>
 
-    <p style="font-size:13px;color:#64748b;">
+    <p style="font-size:13px;color:#8b6b4f;">
         Update user details below.
     </p>
 </div>
 
 <div style="
-        background:white;
-        border:1px solid #e2e8f0;
+        background:#fffdf9;
+        border:1px solid #e7d8c8;
         border-radius:12px;
         padding:25px 30px;
         box-sizing: border-box;
@@ -31,16 +31,16 @@
 
         {{-- NAME --}}
         <div>
-            <label style="font-size:13px;font-weight:600;color:#475569;display:block;margin-bottom:6px;">
+            <label style="font-size:13px;font-weight:600;color:#5e422d;display:block;margin-bottom:6px;">
                 Name
             </label>
             <input type="text" name="name" value="{{ $user->name }}"
                 style="
                     width:100%;
                     padding:10px 12px;
-                    border:1px solid #e5e7eb;
+                    border:1px solid #e7d8c8;
                     border-radius:10px;
-                    background:#f9fafb;
+                    background:#fdf8f3;
                     font-size:14px;
                     box-sizing:border-box;
                 ">
@@ -48,16 +48,16 @@
 
         {{-- EMAIL --}}
         <div>
-            <label style="font-size:13px;font-weight:600;color:#475569;display:block;margin-bottom:6px;">
+            <label style="font-size:13px;font-weight:600;color:#5e422d;display:block;margin-bottom:6px;">
                 Email
             </label>
             <input type="email" name="email" value="{{ $user->email }}"
                 style="
                     width:100%;
                     padding:10px 12px;
-                    border:1px solid #e5e7eb;
+                    border:1px solid #e7d8c8;
                     border-radius:10px;
-                    background:#f9fafb;
+                    background:#fdf8f3;
                     font-size:14px;
                     box-sizing:border-box;
                 ">
@@ -65,16 +65,16 @@
 
         {{-- ROLE --}}
         <div>
-            <label style="font-size:13px;font-weight:600;color:#475569;display:block;margin-bottom:6px;">
+            <label style="font-size:13px;font-weight:600;color:#5e422d;display:block;margin-bottom:6px;">
                 Role
             </label>
             <select name="role"
                 style="
                     width:100%;
                     padding:10px 12px;
-                    border:1px solid #e5e7eb;
+                    border:1px solid #e7d8c8;
                     border-radius:10px;
-                    background:#f9fafb;
+                    background:#fdf8f3;
                     font-size:14px;
                     box-sizing:border-box;
                 ">
@@ -86,16 +86,16 @@
 
         {{-- PASSWORD --}}
         <div>
-            <label style="font-size:13px;font-weight:600;color:#475569;display:block;margin-bottom:6px;">
+            <label style="font-size:13px;font-weight:600;color:#5e422d;display:block;margin-bottom:6px;">
                 New Password (optional)
             </label>
             <input type="password" name="password"
                 style="
                     width:100%;
                     padding:10px 12px;
-                    border:1px solid #e5e7eb;
+                    border:1px solid #e7d8c8;
                     border-radius:10px;
-                    background:#f9fafb;
+                    background:#fdf8f3;
                     font-size:14px;
                     box-sizing:border-box;
                 ">
@@ -108,7 +108,7 @@
             <button type="submit"
                 style="
                     padding:10px 16px;
-                    background:rgb(205,73,223);
+                    background:#b87333;
                     color:white;
                     border:none;
                     border-radius:10px;
@@ -123,8 +123,8 @@
                 onclick="window.location.href='{{ route('admin.users.index') }}'"
                 style="
                     padding:10px 16px;
-                    background:rgb(228, 228, 228);
-                    color:black;
+                    background:#efe3d4;
+                    color:#5e422d;
                     border:none;
                     border-radius:10px;
                     font-weight:600;

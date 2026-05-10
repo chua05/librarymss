@@ -4,21 +4,21 @@
 
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
     <div>
-        <h1 style="font-size:22px;font-weight:700;color:#0f172a;">Books</h1>
-        <p style="font-size:13px;color:#64748b;">Manage library books</p>
+        <h1 style="font-size:22px;font-weight:700;color:#3c2a1e;">Books</h1>
+        <p style="font-size:13px;color:#8b6b4f;">Manage library books</p>
     </div>
 
     <a href="{{ route('admin.books.create') }}"
-       style="padding:10px 16px;background:rgb(205,73,223);color:white;border-radius:10px;text-decoration:none;font-size:13px;">
+       style="padding:10px 16px;background:#b87333;color:white;border-radius:10px;text-decoration:none;font-size:13px;">
         + Add Book
     </a>
 </div>
 
-<div style="background:white;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden;">
+<div style="background:#fffdf9;border:1px solid #e7d8c8;border-radius:12px;overflow:hidden;">
 
     <table style="width:100%;border-collapse:collapse;font-size:14px;">
         <thead>
-            <tr style="background:#f8fafc;">
+            <tr style="background:#f3e8dc;">
                 <th style="padding:12px;text-align:left;">Title</th>
                 <th style="padding:12px;text-align:left;">Author</th>
                 <th style="padding:12px;text-align:left;">Category</th>
@@ -33,7 +33,7 @@
 
         <tbody>
         @forelse($books as $book)
-            <tr style="border-top:1px solid #eee;">
+            <tr style="border-top:1px solid #eadfce;">
                 <td style="padding:12px;">{{ $book->title }}</td>
                 <td style="padding:12px;">{{ $book->author ?? '-' }}</td>
                 <td style="padding:12px;">{{ $book->category ?? '-' }}</td>
@@ -50,32 +50,23 @@
                         ->where('status', 'pending')
                         ->exists();
 
-                    if ($isBorrowed) {
-                        $status = 'Borrowed';
-                        $color = '#ef4444';
-                    } elseif ($isReserved) {
-                        $status = 'Reserved';
-                        $color = '#f59e0b';
-                    } else {
-                        $status = 'Available';
-                        $color = '#22c55e';
-                    }
+                    // status chips rendered below
                 @endphp
 
                
 
                     @if($isBorrowed)
-                        <span style="background:#fee2e2;color:#991b1b;padding:4px 10px;border-radius:99px;font-size:12px;">
+                        <span style="background:#fff1e8;color:#a24b1d;padding:4px 10px;border-radius:99px;font-size:12px;">
                             Borrowed
                         </span>
 
                     @elseif($isReserved)
-                        <span style="background:#dbeafe;color:#1d4ed8;padding:4px 10px;border-radius:99px;font-size:12px;">
+                        <span style="background:#f6e7d7;color:#8b5a2b;padding:4px 10px;border-radius:99px;font-size:12px;">
                             Reserved
                         </span>
 
                     @else
-                        <span style="background:#dcfce7;color:#166534;padding:4px 10px;border-radius:99px;font-size:12px;">
+                        <span style="background:#f2e5d7;color:#7a4b22;padding:4px 10px;border-radius:99px;font-size:12px;">
                             Available
                         </span>
                     @endif
@@ -88,7 +79,7 @@
 
                         {{-- EDIT --}}
                         <a href="{{ route('admin.books.edit', $book->id) }}"
-                           style="padding:6px 10px;background:#3b82f6;color:white;border-radius:8px;text-decoration:none;font-size:12px;">
+                           style="padding:6px 10px;background:#8b5a2b;color:white;border-radius:8px;text-decoration:none;font-size:12px;">
                             Edit
                         </a>
 
@@ -99,7 +90,7 @@
 
                             <button type="submit"
                                 onclick="return confirm('Are you sure you want to delete this book?')"
-                                style="padding:6px 10px;background:#ef4444;color:white;border:none;border-radius:8px;font-size:12px;cursor:pointer;">
+                                style="padding:6px 10px;background:#b45309;color:white;border:none;border-radius:8px;font-size:12px;cursor:pointer;">
                                 Delete
                             </button>
 
@@ -111,7 +102,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="6" style="padding:20px;text-align:center;color:#94a3b8;">
+                <td colspan="6" style="padding:20px;text-align:center;color:#9a7a5f;">
                     No books found.
                 </td>
             </tr>

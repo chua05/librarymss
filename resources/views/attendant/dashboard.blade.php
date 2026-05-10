@@ -3,11 +3,11 @@
 @section('content')
 
 <div style="margin-bottom:20px;">
-    <h1 style="font-size:22px;font-weight:700;color:#0f172a;">
+    <h1 style="font-size:22px;font-weight:700;color:#3c2a1e;">
         Librarian Dashboard
     </h1>
 
-    <p style="font-size:13px;color:#64748b;">
+    <p style="font-size:13px;color:#8b6b4f;">
         Manage borrow requests, returns, and reservations in the system.
     </p>
 </div>
@@ -15,22 +15,22 @@
 {{-- STATS --}}
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-bottom:25px;">
 
-    <div style="background:white;padding:20px;border-radius:12px;border:1px solid #e2e8f0;">
-        <h3 style="color:rgb(205,73,223);font-size:14px;">Pending Requests</h3>
+    <div style="background:#fffdf9;padding:20px;border-radius:12px;border:1px solid #e7d8c8;">
+        <h3 style="color:#b87333;font-size:14px;">Pending Requests</h3>
         <p style="font-size:24px;font-weight:700;">
             {{ \App\Models\BorrowRequest::where('status','pending')->count() }}
         </p>
     </div>
 
-    <div style="background:white;padding:20px;border-radius:12px;border:1px solid #e2e8f0;">
-        <h3 style="color:rgb(205,73,223);font-size:14px;">Borrowed Books</h3>
+    <div style="background:#fffdf9;padding:20px;border-radius:12px;border:1px solid #e7d8c8;">
+        <h3 style="color:#b87333;font-size:14px;">Borrowed Books</h3>
         <p style="font-size:24px;font-weight:700;">
             {{ \App\Models\BorrowRequest::where('status','borrowed')->count() }}
         </p>
     </div>
 
-    <div style="background:white;padding:20px;border-radius:12px;border:1px solid #e2e8f0;">
-        <h3 style="color:rgb(205,73,223);font-size:14px;">Returned Books</h3>
+    <div style="background:#fffdf9;padding:20px;border-radius:12px;border:1px solid #e7d8c8;">
+        <h3 style="color:#b87333;font-size:14px;">Returned Books</h3>
         <p style="font-size:24px;font-weight:700;">
             {{ \App\Models\BorrowRequest::where('status','returned')->count() }}
         </p>
@@ -39,7 +39,7 @@
 </div>
 
 {{-- QUICK ACTIONS --}}
-<div style="background:white;border:1px solid #e2e8f0;border-radius:12px;padding:20px;">
+<div style="background:#fffdf9;border:1px solid #e7d8c8;border-radius:12px;padding:20px;">
 
     <h2 style="font-size:16px;font-weight:600;margin-bottom:15px;">
         Quick Actions

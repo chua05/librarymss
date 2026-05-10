@@ -8,15 +8,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
+        :root {
+            --bg: #f8f3ed;
+            --surface: #fffdf9;
+            --surface-muted: #f3e8dc;
+            --border: #e7d8c8;
+            --text: #3c2a1e;
+            --primary: #b87333;
+            --danger: #b45309;
+            --danger-bg: #fff1e8;
+        }
+
         body {
             font-family: 'Sora', sans-serif;
-            background: #fffaff;
+            background: var(--bg);
+            color: var(--text);
             margin: 0;
         }
 
         /* NAVBAR (SAME STYLE AS ADMIN) */
         .navbar {
-            background: #740074;
+            background: #6f4e37;
             height: 60px;
             display: flex;
             justify-content: space-between;
@@ -33,12 +45,12 @@
         }
 
         .navbar a:hover {
-            color: #f881f8;
+            color: #ffd7ab;
         }
 
         /* ACTIVE LINK STYLE */
         .navbar a.active {
-            color: #f881f8;
+            color: #ffd7ab;
             font-weight: 600;
         }
 
@@ -60,7 +72,7 @@
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            background: rgb(205, 73, 223);
+            background: var(--primary);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -79,8 +91,8 @@
             position: absolute;
             right: 0;
             top: 40px;
-            background: white;
-            border: 1px solid #e2e8f0;
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 10px;
             width: 150px;
             display: none;
@@ -96,13 +108,13 @@
             text-align: left;
             font-size: 13px;
             cursor: pointer;
-            color: #0f172a;
+            color: var(--text);
             text-decoration: none;
         }
 
         .dropdown a:hover {
-            background: #f3f4f6;
-            color: black;
+            background: var(--surface-muted);
+            color: var(--text);
         }
 
         .show { display: flex; }
@@ -115,26 +127,26 @@
             padding: 10px;
             font-size: 13px;
             cursor: pointer;
-            color: #ef4444;
+            color: var(--danger);
         }
 
         .btn-logout:hover {
-            background: #fee2e2;
+            background: var(--danger-bg);
         }
 
         /* reusable UI card (for future dashboard pages) */
         .card {
-            background: white;
-            border: 1px solid #e2e8f0;
+            background: var(--surface);
+            border: 1px solid var(--border);
             border-radius: 12px;
             padding: 15px;
         }
 
         .dashboard-btn {
             padding:10px 16px;
-            background:white;
-            border:1px solid #e2e8f0;
-            color:rgb(205,73,223);
+            background:var(--surface);
+            border:1px solid var(--border);
+            color:var(--primary);
             border-radius:10px;
             text-decoration:none;
             font-size:13px;
@@ -142,9 +154,9 @@
         }
 
         .dashboard-btn:hover {
-            background: rgb(205,73,223);
+            background: var(--primary);
             color: white;
-            border-color: rgb(205,73,223);
+            border-color: var(--primary);
         }
 
     </style>
@@ -223,7 +235,7 @@ document.querySelectorAll('.navbar a').forEach(link => {
 
             font-size: 14px;
             font-weight: 500;
-            color:rgb(41, 190, 88);
+            color:#965d2d;
             background: transparent;
 
             padding: 6px 12px;

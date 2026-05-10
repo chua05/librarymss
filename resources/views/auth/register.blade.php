@@ -12,17 +12,17 @@
         font-family: 'Sora', sans-serif;
         min-height: 100vh;
         display: flex;
-        background: #260f2a;
+        background: #f8f3ed;
         overflow: hidden;
     }
 
     .left-panel {
         flex: 1;
-        background: linear-gradient(135deg, #521e5f 0%, #280f2a 60%, #351034 100%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 60px;
+        background:
+            linear-gradient(rgba(71, 42, 20, 0.45), rgba(71, 42, 20, 0.45)),
+            url('https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=1600&q=80');
+        background-size: cover;
+        background-position: center;
         position: relative;
         overflow: hidden;
     }
@@ -33,7 +33,7 @@
         width: 500px;
         height: 500px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(245, 56, 248, 0.08) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(255, 214, 171, 0.2) 0%, transparent 70%);
         top: -100px;
         left: -100px;
     }
@@ -44,73 +44,20 @@
         width: 400px;
         height: 400px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(236, 92, 246, 0.07) 0%, transparent 70%);
+        background: radial-gradient(circle, rgba(184, 115, 51, 0.18) 0%, transparent 70%);
         bottom: -80px;
         right: -80px;
     }
 
-    .brand {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        margin-bottom: 60px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .brand-icon {
-        width: 44px;
-        height: 44px;
-        background: linear-gradient(135deg, #38bdf8, #818cf8);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-    }
-
-    .brand-name {
-        font-size: 18px;
-        font-weight: 600;
-        color: white;
-        letter-spacing: -0.3px;
-    }
-
-    .hero-text {
-        position: relative;
-        z-index: 1;
-    }
-
-    .hero-text h1 {
-        font-size: 48px;
-        font-weight: 700;
-        color: white;
-        line-height: 1.1;
-        letter-spacing: -1.5px;
-        margin-bottom: 20px;
-    }
-
-    .hero-text h1 span {
-        background: linear-gradient(90deg, #eb38f8, #f881f8);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    .hero-text p {
-        font-size: 15px;
-        color: #b494b8;
-        line-height: 1.7;
-        max-width: 340px;
-    }
-
     .right-panel {
         width: 500px;
-        background: #ffffff;
+        background: #fffdf9;
         display: flex;
         flex-direction: column;
         justify-content: center;
         padding: 50px;
         overflow-y: auto;
+        border-left: 1px solid #e7d8c8;
     }
 
     .form-header { margin-bottom: 28px; }
@@ -118,14 +65,14 @@
     .form-header h2 {
         font-size: 26px;
         font-weight: 700;
-        color: #2a0f2a;
+        color: #3c2a1e;
         letter-spacing: -0.5px;
         margin-bottom: 6px;
     }
 
     .form-header p {
         font-size: 14px;
-        color: #88648b;
+        color: #8b6b4f;
     }
 
     .form-group {
@@ -136,7 +83,7 @@
         display: block;
         font-size: 12px;
         font-weight: 600;
-        color: #4c3751;
+        color: #5e422d;
         margin-bottom: 7px;
         letter-spacing: 0.4px;
         text-transform: uppercase;
@@ -145,20 +92,20 @@
     .form-group input {
         width: 100%;
         padding: 11px 14px;
-        border: 1.5px solid #e2e8f0;
+        border: 1.5px solid #e7d8c8;
         border-radius: 10px;
         font-size: 14px;
         font-family: 'Sora', sans-serif;
-        color: #270f2a;
-        background: #f8fafc;
+        color: #3c2a1e;
+        background: #fdf8f3;
         transition: all 0.2s;
         outline: none;
     }
 
     .form-group input:focus {
-        border-color: #f838f8;
+        border-color: #b87333;
         background: white;
-        box-shadow: 0 0 0 3px rgba(56,189,248,0.1);
+        box-shadow: 0 0 0 3px rgba(184,115,51,0.16);
     }
 
     .form-row {
@@ -176,7 +123,7 @@
     .btn-register {
         width: 100%;
         padding: 13px;
-        background: linear-gradient(135deg, #e90ee2, #ec63f1);
+        background: linear-gradient(135deg, #b87333, #cc8c4d);
         color: white;
         border: none;
         border-radius: 10px;
@@ -196,11 +143,11 @@
         text-align: center;
         margin-top: 20px;
         font-size: 13px;
-        color: #8a648b;
+        color: #8b6b4f;
     }
 
     .login-link a {
-        color: #ec63f1;
+        color: #b87333;
         font-weight: 600;
         text-decoration: none;
     }
@@ -221,7 +168,7 @@
 
     .right-panel {
         scrollbar-width: thin;
-        scrollbar-color: #ec63f1 #f8fafc;
+        scrollbar-color: #b87333 #fdf8f3;
     }
 
     .right-panel::-webkit-scrollbar {
@@ -229,31 +176,31 @@
     }
 
     .right-panel::-webkit-scrollbar-thumb {
-        background: #ec63f1;
+        background: #b87333;
         border-radius: 10px;
     }
 
     .right-panel::-webkit-scrollbar-track {
-        background: #f8fafc;
+        background: #fdf8f3;
     }
 
     .form-group select {
         width: 100%;
         padding: 11px 14px;
-        border: 1.5px solid #e2e8f0;
+        border: 1.5px solid #e7d8c8;
         border-radius: 10px;
         font-size: 14px;
         font-family: 'Sora', sans-serif;
-        color: #270f2a;
-        background: #f8fafc;
+        color: #3c2a1e;
+        background: #fdf8f3;
         outline: none;
         transition: all 0.2s;
     }
 
     .form-group select:focus {
-        border-color: #f838f8;
+        border-color: #b87333;
         background: white;
-        box-shadow: 0 0 0 3px rgba(56,189,248,0.1);
+        box-shadow: 0 0 0 3px rgba(184,115,51,0.16);
     }
 
     .form-group {
@@ -261,7 +208,7 @@
     }
 
     .btn-register {
-        box-shadow: 0 8px 20px rgba(233, 14, 226, 0.25);
+        box-shadow: 0 8px 20px rgba(184, 115, 51, 0.24);
     }
 
     .hero-text h1 {
@@ -273,16 +220,7 @@
 <body>
 
 <!-- LEFT PANEL -->
-<div class="left-panel">
-    <div class="brand">
-        <span class="brand-name">Library Management System</span>
-    </div>
-
-    <div class="hero-text">
-        <h1>LIBRARY <span>MS</span></h1>
-        <p>Create Your Account!</p>
-    </div>
-</div>
+<div class="left-panel"></div>
 
 <!-- RIGHT PANEL -->
 <div class="right-panel">
@@ -374,23 +312,23 @@
         </div>
 
         <!-- CONSENT -->
-        <div style="margin-top:12px;font-size:12px;color:#8a648b;line-height:1.5;">
+        <div style="margin-top:12px;font-size:12px;color:#8b6b4f;line-height:1.5;">
     <label style="display:flex;align-items:flex-start;gap:8px;margin-bottom:10px;">
         <input type="checkbox"
                name="agree_terms"
                required
-               style="margin-top:3px;accent-color:#ec63f1;">
+               style="margin-top:3px;accent-color:#b87333;">
         <span>
             I agree to the Terms and Conditions.
         </span>
     </label>
 
-    <div style="margin-top:12px;font-size:12px;color:#8a648b;line-height:1.5;">
+    <div style="margin-top:12px;font-size:12px;color:#8b6b4f;line-height:1.5;">
     <label style="display:flex;align-items:flex-start;gap:8px;">
         <input type="checkbox"
                name="email_notification"
                required
-               style="margin-top:3px;accent-color:#ec63f1;">
+               style="margin-top:3px;accent-color:#b87333;">
         <span>
         A verification email will be sent to your email address after registration. Please verify your account before logging in.
         </span>

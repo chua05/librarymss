@@ -3,21 +3,21 @@
 @section('content')
 
 <div style="margin-bottom:20px;">
-    <h1 style="font-size:22px;font-weight:700;color:#0f172a;">
+    <h1 style="font-size:22px;font-weight:700;color:#3c2a1e;">
         My Borrowed Books
     </h1>
 
-    <p style="font-size:13px;color:#64748b;">
+    <p style="font-size:13px;color:#8b6b4f;">
         Track your borrowed books and return status.
     </p>
 </div>
 
-<div style="background:white;border:1px solid #e2e8f0;border-radius:12px;padding:15px;">
+<div style="background:#fffdf9;border:1px solid #e7d8c8;border-radius:12px;padding:15px;">
 
     <table style="width:100%;border-collapse:collapse;font-size:13px;">
 
         <thead>
-            <tr style="text-align:left;color:#64748b;border-bottom:1px solid #e2e8f0;">
+            <tr style="text-align:left;color:#8b6b4f;border-bottom:1px solid #e7d8c8;">
                 <th style="padding:10px;">Book</th>
                 <th>Status</th>
                 <th>Date Borrowed</th>
@@ -27,7 +27,7 @@
 
         <tbody>
         @forelse($borrows as $borrow)
-            <tr style="border-bottom:1px solid #f1f5f9;">
+            <tr style="border-bottom:1px solid #eadfce;">
 
                 <td style="padding:10px;">
                     {{ $borrow->book->title ?? 'N/A' }}
@@ -39,8 +39,8 @@
                         border-radius:999px;
                         font-size:11px;
                         background:
-                        {{ $borrow->status == 'approved' ? '#dcfce7' : '#fef9c3' }};
-                        color:#0f172a;
+                        {{ $borrow->status == 'approved' ? '#f2e5d7' : '#fbead8' }};
+                        color:#5e422d;
                     ">
                         {{ ucfirst($borrow->status) }}
                     </span>
@@ -59,7 +59,7 @@
                             <button type="submit"
                                 style="border:none;
                                 background:none;
-                                color:#ef4444;
+                                color:#b45309;
                                 font-size:25px;
                                 cursor:pointer;
                                 padding:0 14px;
@@ -71,14 +71,14 @@
                             </button
                         </form>
                     @else
-                        <span style="color:#94a3b8;">—</span>
+                        <span style="color:#9a7a5f;">—</span>
                     @endif
                 </td>
 
             </tr>
         @empty
             <tr>
-                <td colspan="4" style="padding:30px;text-align:center;color:#64748b;">
+                <td colspan="4" style="padding:30px;text-align:center;color:#8b6b4f;">
                     No borrowed books yet.
                 </td>
             </tr>
